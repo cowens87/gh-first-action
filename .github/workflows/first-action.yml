@@ -1,0 +1,13 @@
+name: First Workflow # you have to name your workflow first
+# on key defines WHEN the workflow will run, the value will be the event type
+on: workflow_dispatch # workflow_dispatch is an event that waits for the user to manually start the workflow
+jobs: # the work that will be done
+  first-job: # this key is the name of the job and can be named whatever you like
+    runs-on: ubuntu-latest # this key defines the runner on which the job will be executed
+    steps: 
+      - name: Print greeting # must name the steps
+        run: echo 'Hello World' # defining a command that will be executed in the command line
+      - name: Print goodbye
+        run: echo 'Goodbyd World'
+      
+  
